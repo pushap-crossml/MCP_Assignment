@@ -1,0 +1,28 @@
+{
+  "aadhaar": {
+    "123456789012": {
+      "name": "Pushap Tyagi",
+      "status": "Active",
+      "address": "Delhi",
+      "update_status": "Completed"
+    }
+  },
+  "pan": {
+    "ABCDE1234F": {
+      "name": "Pushap Tyagi",
+      "linked_aadhaar": true
+    }
+  },
+  "passport": {
+    "PSP123456": {
+      "status": "Police Verification Completed",
+      "expected_dispatch_days": 5
+    }
+  },
+  "grievances": {
+    "GRV1001": {
+      "department": "MEA",
+      "status": "In Progress"
+    }
+  }
+}
