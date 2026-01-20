@@ -32,9 +32,9 @@ from cred import GEMINI_API_KEY
 # -------------------------------
 try:
     model: ChatGoogleGenerativeAI = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash-lite",
+        model="gemini-2.5-flash",
         api_key=GEMINI_API_KEY,
-        temperature=0,
+        temperature=0.7,
     )
 except Exception as e:
     raise RuntimeError(f"Failed to initialize Google Gemini language model: {e}")

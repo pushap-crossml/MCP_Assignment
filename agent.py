@@ -24,7 +24,7 @@ import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import create_agent
 from client import model, tools
-
+from prompt import system_prompt
 
 async def run_agent() -> None:
     """
@@ -71,11 +71,7 @@ async def run_agent() -> None:
     agent = create_agent(
         model=model,
         tools=tools,
-        system_prompt=(
-            "You are an AI Government Service Assistant. "
-            "You help citizens with Aadhaar, PAN, Passport, and Grievances. "
-            "Always use tools when available."
-        )
+        system_prompt= system_prompt
     )
 
     # 4️⃣ Interactive Chat Loop

@@ -21,7 +21,7 @@ Author: Pushap Tyagi
 
 from fastmcp import FastMCP
 from db import load_db
-
+import sys
 # ---------------------------------------------------------------------
 # MCP Server Initialization
 # ---------------------------------------------------------------------
@@ -50,6 +50,11 @@ def aadhaar_status_check(aadhaar_number: str) -> dict:
             otherwise an error message indicating the Aadhaar
             record was not found.
     """
+
+    print(
+        f"[MCP TOOL CALLED] aadhaar_status_check | aadhaar_number={aadhaar_number}",
+        file=sys.stderr
+    )
     db = load_db()
     return db["aadhaar"].get(
         aadhaar_number,
@@ -78,6 +83,10 @@ def pan_status_check(pan_number: str) -> dict:
             otherwise an error message indicating the PAN
             record was not found.
     """
+    print(
+        f"[MCP TOOL CALLED] pan_status_check | pan_number={pan_number}",
+        file=sys.stderr
+    )
     db = load_db()
     return db["pan"].get(
         pan_number,
@@ -106,6 +115,10 @@ def passport_status_check(application_id: str) -> dict:
             otherwise an error message indicating the application
             was not found.
     """
+    print(
+        f"[MCP TOOL CALLED] passport_status_check | application_id={application_id}",
+        file=sys.stderr
+    )
     db = load_db()
     return db["passport"].get(
         application_id,
@@ -134,6 +147,10 @@ def grievance_status_check(grievance_id: str) -> dict:
             otherwise an error message indicating the grievance
             record was not found.
     """
+    print(
+        f"[MCP TOOL CALLED] grievance_status_check | grievance_id={grievance_id}",
+        file=sys.stderr
+    )
     db = load_db()
     return db["grievances"].get(
         grievance_id,
